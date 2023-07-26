@@ -17,7 +17,7 @@ st.set_page_config(
     )
 
 # authentification / login
-with open('./webapplikation/config.yaml') as file:
+with open('config.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
 
 # create authenticator
