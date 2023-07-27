@@ -33,7 +33,7 @@ def classfier(text):
 # Führt Textsentiment Analyse aus
 @st.cache_data(show_spinner=False)
 def sentiment(text):
-    sentiment_model_path = "siebert/sentiment-roberta-large-english"
+    sentiment_model_path = "cardiffnlp/twitter-roberta-base-sentiment-latest"#siebert/sentiment-roberta-large-english"
     tokenizer=AutoTokenizer.from_pretrained(sentiment_model_path,use_fast=False)
     sentiment_task = pipeline("sentiment-analysis", model=sentiment_model_path, tokenizer=tokenizer)
 
